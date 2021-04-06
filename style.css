@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "ralewaythin";
+    src: url("font/raleway-variablefont_wght-webfont.woff2") format("woff2"),
+         url("font/raleway-variablefont_wght-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#blocpage{
+    width:90%;
+    margin: auto;
+}
+
+body{
+    font-family: "ralewaythin", serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    list-style-type:none;
+    width: 400px;
+    justify-content: space-around;
+}
+
+
+nav a{
+    font-size: 1em;;
+    text-decoration: none;
+    color:black;
+
+}
+
+nav a:hover{
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+    padding: 19px 10px 0 10px;
+
+}
+ 
+#inscription{
+    color: #0065fc;
+    font-weight: bold; 
+}
+
+h1{
+    font-size:1.5em;
+    font-weight: bold;
+
+}
+#form{
+    display: flex;
+}
+
+#blocformulaire{
+    display: flex;
+}
+
+#bouton{
+    background-color:#0065fc;
+    color:white;
+}
+
+
+#filtre{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 70%;
+}
+
+#money img{
+    height:15px;
+    border: solid #deebff 2px;
+    border-radius:50%;
+    padding:10px;
+    background-color:#deebff;
+    
+}
+
+#money{
+    border:solid #F2F2F2 2px;
+    border-radius: 35px;
+}
+
+#enfant img{
+    height:15px;
+    border: solid #deebff 2px;
+    border-radius:50%;
+    padding:10px;
+    background-color:#deebff;
+}
+
+#enfant{
+    border:solid #F2F2F2 2px;
+    border-radius: 35px;
+}
+
+#coeur img{
+    height:15px;
+    border: solid #deebff 2px;
+    border-radius:50%;
+    padding:10px;
+    background-color:#deebff;
+}
+
+#coeur{
+    border:solid #F2F2F2 2px;
+    border-radius: 35px;
+}
+
+#chien img{
+    height:15px;
+    border: solid #deebff 2px;
+    border-radius:50%;
+    padding:10px;
+    background-color:#deebff;
+}
+
+#chien{
+    border:solid #F2F2F2 2px;
+    border-radius: 35px;
+}
+
+#info img{
+    height:15px;
+    border: solid #F2F2F2 2px;
+    border-radius: 50%;
+    padding:9px;
+    margin-right: 15px;
+    
+}
+
+#info{
+    display: flex;
+    align-items: center;
+}
+
+
