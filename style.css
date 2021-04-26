@@ -1,39 +1,36 @@
-@font-face {
-    font-family: "raleway";
-    src: url("font/raleway-bold-webfont.woff2") format("woff2"),
-         url("font/raleway-bold-webfont.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: "raleway";
-    src: url("font/raleway-regular-webfont.woff2") format("woff2"),
-         url("font/raleway-regular-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: "raleway";
-    src: url("font/raleway-light-webfont.woff2") format("woff2"),
-         url("font/raleway-light-webfont.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-
-}
-
+/* main*/
 #bloc-page{
     width:95%;
     margin: auto;
-    padding-top: 18px;
+    padding-top: 25px;
 }
 
 body{
-    font-family: "raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+h1{
+    font-size:1.4em;
+    font-weight: bold;
+
+}
+
+h2, h3{ 
+    font-size: 1em;
+    font-weight: bold;
+}
+
+span{
+    font-weight: bold;
+}
+
+p{
+    font-size: 1em;
+    font-weight: 400;
+}
+
 
 #logo{
     width: 100px;
@@ -43,6 +40,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
+
 
 /* partie nav*/
 nav ul{
@@ -56,42 +54,19 @@ nav a{
     font-size: 1em;;
     text-decoration: none;
     color:black;
-
 }
 
 nav a:hover{
     color: #0065fc;
     border-top: 2px solid #0065fc;
     padding: 40px 10px 0 10px;
-
 }
 
 #inscription{
     color: #0065fc;
     font-weight: bold;
-
 }
  
-h1{
-    font-size:1.4em;
-    font-weight: bold;
-
-}
-
-p{
-    font-size: 1em;
-    font-weight: normal;
-}
-
-
-h2{ 
-    font-size: 1em;
-    font-weight: bold;
-}
-
-span{
-    font-weight: bold;
-}
 
 
 /* partie formulaire*/
@@ -122,6 +97,10 @@ span{
     font-size: 1em;    
 }
 
+.icon-search{
+    display: none;
+}
+
 input{
     font-size: 1.3em;
     border: none;
@@ -133,6 +112,7 @@ input{
     display: flex;
     height: 50px;
     width:30%;
+    margin-top: 35px;
 }
 
 /* partie filtres*/
@@ -149,36 +129,42 @@ input{
     border: solid #DEEBFF 2px;
     border-radius: 50%;
     background-color: #DEEBFF;
-    padding: 15px;
+    text-align: center;
+    padding: 10px;
     color: #0065fc;
+    margin: -2px 6px -2px -2px;
 }
 
-.filter-button{   /* filtre contenant un icone et un titre h2*/
+.filter-button{   /* filtre contenant un icone et un titre h3*/
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: solid 2px #f2f2f2;
-    height: 50px;
+    height: 40px;
     border-radius: 30px;
-    padding-right:15px;
+    padding-right: 15px;
 }
 
 /* paragraphe info*/
 
 #info{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 35%; 
+    justify-content: flex-start;
+    align-items: center; 
     margin-top: 15px; 
-    font-weight: 300; 
+    font-weight: 300;
+    font-size: 0.9em; 
 }
 
 .icon-info{
     color: #0065fc;
     border:#f2f2f2 solid 2px;
     border-radius: 50%;
-    padding: 10px;
+    padding: 7px;
+    font-size: 0.7em;
+    margin-right: 10px;
 }
+    
 
 /* partie hebergement*/
 
@@ -199,7 +185,6 @@ input{
 }
 
 #accommodation-popular h1{
-    font-size: 1.2em;
     margin: 30px 30px 0 30px;
 }
 
@@ -208,7 +193,7 @@ input{
     margin-left: 30px;
 }
 
-#accommodation-popular h2,p{
+#accommodation-popular h2 p{
     margin-left: 10px;
     font-size: 0.9em;
 }
@@ -292,14 +277,14 @@ input{
     height: 120px;
 }
 
-.popular-name{
+.popular-name{           /* bloc comprenant le texte a droite de la photo*/
 	width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.popular{
+.popular{                          /* bloc "cart populaire" comprenant photo + texte*/
     background-color: white;
     border: white 5px solid;
     border-radius: 15px;
@@ -307,7 +292,7 @@ input{
 	margin: 15px 30px;	
 }
 
-#accommodation-popular{
+#accommodation-popular{          /* bloc compenant les deux sections hébergement et popuplaire*/
 	display: flex;
 	justify-content: space-between;
 }
@@ -388,6 +373,7 @@ input{
 /*    partie footer   */
 
 footer{
+    width: 100%;
     margin-top: 100px;
     background-color: #f2f2f2;  
 }
@@ -410,3 +396,200 @@ footer a{
     padding-top: 40px;
     font-size: 0.9em;
 }
+
+/* media queries format téléphone*/
+
+@media screen and (max-width: 576px) {
+    #bloc-page{
+        width: 100%;
+    }
+
+    #logo{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    header{
+        flex-direction: column;
+    }
+
+    #inscription{
+        position: absolute;
+        top: 45px;
+        right: 20px;
+    } 
+
+    
+     
+      
+    nav ul{
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 0;
+    }
+
+
+    nav a:hover{
+        
+        color: #0065fc;
+        border-top: none;
+        border-bottom: 2px solid #0065fc;
+        padding: 10px 0;
+    }
+
+    #inscription:hover{
+        padding: 0;
+        border-bottom: none;
+        
+    }
+
+    #search-section{
+        margin: 20px;
+    }
+
+
+    /* bloc formulaire rechercher*/
+    #form-section{
+        width: 100%;
+    }
+    
+    #form-button span{
+        display: none;
+    }
+
+    .icon-search{
+        display:inline
+    }
+
+    #form-button{
+        border-radius: 15px;
+        margin-left: -2px;    
+    }
+
+
+    /*bloc filtres*/
+    #filter{
+        display: flex;
+        flex-flow: row wrap;
+        align-content:flex-start;
+        width: 100%;
+    }
+
+    #filter h2{
+        align-self: flex-start;
+        margin-right: 300px;
+    }
+
+    .filter-button{
+        margin: 10px 25px 10px 0;
+    }
+
+
+    /*bloc info*/
+    #info{                          
+        margin: 15px 0 10px 0;
+        font-size: 1em;
+        align-items: baseline;
+        
+    }
+
+
+    /* bloc populaire et hébergement*/
+    #accommodation-popular{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    /*section populaire*/
+    .popular-section{
+        width:100%;
+        height: 600px;
+        margin: auto;
+        border-radius: 0;
+    }
+
+    .popular-section h1{
+        font-size: 1.4em;  
+    }
+
+    /*section hébergement*/
+    .accommodation{        
+        width:100%;
+        height: 1400px;
+        margin: auto;
+        background-color: white;
+        border: none;
+    }
+
+    #room-picture-panel{
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .room{
+        width: 95%;
+        margin: auto;
+    }
+
+
+    /*section activités*/
+    .big-picture img{
+        width: 100%;
+        height:130px;
+    }
+
+    .small-picture img{
+        width: 100%;
+        height:130px;
+    }
+
+    .small-picture a{
+        width: 100%;
+        height: 195px;
+    }
+
+    .big-picture a{
+        width: 100%;
+        height: 195px;
+        
+    }
+
+    #activity-card-panel{
+        flex-direction: column;
+        width: 100%;
+        height: 1350px;
+        
+    }
+
+
+    /* footer*/     
+    .footer-section{
+        width: 95%;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px 30px;
+        height: 450px;
+        font-size: 1em;
+    }
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,6 +5,8 @@
         <title>Reservia</title>
         <script src="https://kit.fontawesome.com/5f42898a4f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <!--header et nav-->
@@ -29,10 +31,10 @@
                 <form method=post action= "page.php" id="form">
                     <p>
                         <label for="recherche"></label>
-                        <input type="text" name="recherche" id="recherche" value="Marseille,France" maxlenght="20"/>
+                        <input type="text" name="recherche" id="recherche" value="Marseille,France"/>
                     </p>
                     <p>
-                        <button type="submit" id="form-button">Rechercher</button>
+                        <button type="submit" id="form-button"><span>Rechercher</span><i class="fas fa-search icon-search"></i></button>
                     </p>
                 </form>
             </div>
@@ -40,19 +42,19 @@
                 <h2>Filtres</h2>
                 <div class="filter-button">
                     <i class="fas fa-money-bill-wave icon-filter"></i>
-                    <h2>Économique</h2>
+                    <h3>Économique</h3>
                 </div>
                 <div class="filter-button">
                     <i class="fas fa-child icon-filter"></i>
-                    <h2>Familial</h2>
+                    <h3>Familial</h3>
                 </div>
                 <div class="filter-button">
                     <i class="fas fa-heart icon-filter"></i>
-                    <h2>Romantique</h2>
+                    <h3>Romantique</h3>
                 </div>
                 <div class="filter-button">
                     <i class="fas fa-dog icon-filter"></i>
-                    <h2>Animaux autorisés</h2>
+                    <h3>Animaux autorisés</h3>
                 </div>
              </div>
             <div id="info">
@@ -220,7 +222,7 @@
                 <div class="big-picture">
                     <div class="activity-card">
                         <a href="#">
-                            <img src="images/vieux-port.jpg"alt="Vieux-port"/>
+                            <img src="images/vieux-port.jpg" alt="Vieux-port"/>
                             <h2>Vieux Port</h2>
                         </a>
                     </div>
@@ -236,7 +238,7 @@
                     <div class="activity-card">
                         <a href="#">
                             <img src="images/ile.jpg" alt="îles"/>
-                            <h2>&Icircles du Frioul</h2>
+                            <h2>Îles du Frioul</h2>
                         </a>
                     </div>
                 </div>
