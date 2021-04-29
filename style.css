@@ -32,13 +32,18 @@ p{
 }
 
 
-#logo{
+.logo{
+    position: absolute;
     width: 100px;
+    top: 25px;
+    left: 25px;
 }
 
 header{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    
 }
 
 
@@ -46,8 +51,10 @@ header{
 nav ul{
     display: flex;
     list-style-type:none;
-    width: 400px;
-    justify-content: space-around;
+    justify-content: flex-end;
+    width: 300px;
+    margin-top: 0;
+    padding-top: 15px;
 }
 
 nav a{
@@ -56,16 +63,33 @@ nav a{
     color:black;
 }
 
-nav a:hover{
-    color: #0065fc;
-    border-top: 2px solid #0065fc;
-    padding: 40px 10px 0 10px;
+nav li{
+    width: 50%;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: -40px;
 }
 
-#inscription{
+nav li:hover{
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+    padding-top: 38px;
+    margin-top: -40px;
+}
+
+.inscription{
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+.inscription a{
+    font-size: 1em;;
+    text-decoration: none;
     color: #0065fc;
     font-weight: bold;
 }
+
  
 
 
@@ -82,6 +106,7 @@ nav a:hover{
 #form{    /* partie input+bouton*/
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
     border:#f2f2f2 solid 1px; 
     border-radius: 0 15px 15px 0;   
@@ -119,10 +144,14 @@ input{
 
 #filter{     /*bloc contenant titre+ 4 filtres*/
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap ;
+    justify-content: flex-start;
     align-items: center;
-    width: 70%;
     margin-top: 30px;
+}
+
+#filter h2{
+    margin-right: 10px;
 }
 
 .icon-filter{
@@ -137,12 +166,13 @@ input{
 
 .filter-button{   /* filtre contenant un icone et un titre h3*/
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     border: solid 2px #f2f2f2;
     height: 40px;
     border-radius: 30px;
     padding-right: 15px;
+    margin: 15px;
 }
 
 /* paragraphe info*/
@@ -404,43 +434,57 @@ footer a{
         width: 100%;
     }
 
-    #logo{
+    /*header et barre de navigation*/
+    .logo{
+        position:static;
         margin-left: 20px;
-        margin-bottom: 20px;
+        margin-top: 0;
     }
 
     header{
         flex-direction: column;
+        justify-content: flex-start;
     }
 
-    #inscription{
-        position: absolute;
-        top: 45px;
-        right: 20px;
-    } 
 
-    
-     
-      
-    nav ul{
-        flex-flow: row wrap;
+    nav li{
+        width: 50%;
+        border-top: none;
+        border-bottom: 2px solid #f2f2f2;
+        padding-bottom: 10px;
+    }
+  
+    nav{
+        order: 3;
         width: 100%;
-        padding: 0;
+        padding-top: 20px;
     }
 
+    nav ul{
+        width: 100%;
+        margin-left: -40px;
+    }
 
-    nav a:hover{
-        
+    nav li:hover{
         color: #0065fc;
         border-top: none;
         border-bottom: 2px solid #0065fc;
-        padding: 10px 0;
+        padding-bottom: 10px;
+        padding-top: 0;
+        margin-top: 0;
     }
 
-    #inscription:hover{
-        padding: 0;
-        border-bottom: none;
-        
+    nav a:hover{
+        color: #0065fc;
+        border-top: none;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .inscription{
+        align-self: flex-end;
+        margin-top: -44px;
+        padding-right: 25px;
     }
 
     #search-section{
@@ -451,6 +495,7 @@ footer a{
     /* bloc formulaire rechercher*/
     #form-section{
         width: 100%;
+        margin: 35px 0;
     }
     
     #form-button span{
@@ -466,7 +511,7 @@ footer a{
         margin-left: -2px;    
     }
 
-
+    
     /*bloc filtres*/
     #filter{
         display: flex;
@@ -500,25 +545,44 @@ footer a{
         width: 100%;
     }
 
-    /*section populaire*/
+
+    /*section populaire*/    
+    .popular{
+        margin: 15px 20px;
+    }
+
     .popular-section{
         width:100%;
-        height: 600px;
+        height: 620px;
         margin: auto;
         border-radius: 0;
+        border: none;
+    }
+
+    .icon-popular{
+        margin-right: 8px;
     }
 
     .popular-section h1{
         font-size: 1.4em;  
     }
 
+
     /*section hébergement*/
     .accommodation{        
         width:100%;
-        height: 1400px;
+        height: 1300px;
         margin: auto;
         background-color: white;
         border: none;
+    }
+
+    #accommodation-popular h1{
+        margin: 30px 15px 5px 20px;
+    }
+
+    #accommodation-popular h3{
+        margin: 15px 30px 30px 20px;
     }
 
     #room-picture-panel{
@@ -530,11 +594,15 @@ footer a{
 
     .room{
         width: 95%;
-        margin: auto;
+        margin: 10px 0 0 0;
     }
 
 
     /*section activités*/
+    #activity{
+        margin: 70px 20px 20px 20px;
+    }
+  
     .big-picture img{
         width: 100%;
         height:130px;
@@ -556,31 +624,44 @@ footer a{
         
     }
 
+    .activity-card{
+        width: 100%;
+        height: 195px;
+        padding: 10px 0;
+ 
+    }
+
+    .small-picture{    /* bloc contenant les 2 petites images l'une au dessus de l'autre dans la sectuion activité*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 420px;
+        margin: 10px 0;
+    }
+
     #activity-card-panel{
         flex-direction: column;
         width: 100%;
-        height: 1350px;
+        height: 1250px;
         
     }
 
 
     /* footer*/     
     .footer-section{
-        width: 95%;
         flex-direction: column;
         justify-content: space-around;
-        padding: 20px 30px;
-        height: 450px;
+        width: 100%;
+        height: 480px;
         font-size: 1em;
+        padding-left: 0;
+        padding-top: 0;
     }
 
-    
-    
+    .footer-list{
+       padding: 10px 0 10px 20px;
+    }
 }
-
-
-
-
 
 
 
