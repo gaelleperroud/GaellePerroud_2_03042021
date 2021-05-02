@@ -35,7 +35,7 @@ p{
 .logo{
     position: absolute;
     width: 100px;
-    top: 25px;
+    top: 23px;
     left: 25px;
 }
 
@@ -382,7 +382,7 @@ input{
 
 #activity-card-panel{          /* bloc contenant les 6 activity cards*/
 	display: flex;
-    flex-direction: row wrap;
+    flex-direction: row ;
 	justify-content: space-between;
 	height: 400px;
     width:100%;
@@ -555,8 +555,8 @@ footer a{
         width:100%;
         height: 620px;
         margin: auto;
-        border-radius: 0;
         border: none;
+        border-radius: 0px;
     }
 
     .icon-popular{
@@ -599,6 +599,9 @@ footer a{
 
 
     /*section activités*/
+
+
+
     #activity{
         margin: 70px 20px 20px 20px;
     }
@@ -662,6 +665,175 @@ footer a{
        padding: 10px 0 10px 20px;
     }
 }
+
+/* media queries format tablette*/
+
+@media (min-width: 577px) and (max-width: 992px){
+
+    /*bloc search-section*/
+
+    .logo{
+        position: absolute;
+        width: 100px;
+        top: 23px;
+        left: 25px;
+    }
+
+    nav a:hover{
+        color: #0065fc;
+        border-top: none;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+
+    #info{
+        margin-bottom: 15px;
+    }
+
+    /* bloc populaire et hébergement*/
+    #accommodation-popular{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    #accommodation-popular h1{
+        margin: 10px 20px;
+    }
+
+    #accommodation-popular h3{
+        margin: 10px 20px;
+    }
+
+    /*section populaire*/    
+    .popular{
+        margin: 15px 20px;
+    }
+
+    .popular-section{
+        width:100%;
+        height: 620px;
+        margin: auto;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .icon-popular{
+        margin-right: 8px;
+    }
+
+    .popular-section h1{
+        font-size: 1.4em;
+          
+    }
+
+    /*section hébergement*/
+    .accommodation{        
+        width:100%;
+        height: 950px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: white;
+        border: none;
+    }
+
+
+    #room-picture-panel{
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-around;
+        margin: auto;
+        padding: 10px;
+        height: 80%;
+    }
+
+    .room{
+        width: 40%;
+        margin: 10px 0 0 0;
+    }
+
+/*section activités*/
+    #activity h1{
+        margin: 10px 20px;
+        padding-bottom: 20px;
+    }
+
+    .activity-card{
+        padding: 0 10px;
+    }
+
+    #activity-card-panel{          /* bloc contenant les 6 activity cards*/
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        height: 820px;
+        width:100%;
+
+    }
+    
+    .small-picture{    /* bloc contenant les 2 petites images l'une au dessus de l'autre dans la sectuion activité*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:400px;
+        width: 50%;
+    }
+
+    .big-picture{
+        width: 50%;
+        height: 400px;
+    }
+    
+    .big-picture img{                  /* image et lien pour les grandes images activités*/
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        width:100%;
+        height:360px;
+    }
+     
+    .big-picture a{
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 3px 3px rgba(242, 242, 242, 0.7);
+        border-radius: 15px;
+        width:100%;
+        height:400px;
+    }
+    
+    .small-picture img{                 /* image et lien pour les petites images activités*/
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        width:100%;
+        height:135px;
+    }
+    
+    .small-picture a{
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 3px 3px rgba(242, 242, 242, 0.7);
+        border-radius: 15px;
+        width:100%;
+        height:180px;
+    }
+
+    .footer-section{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: 180px;
+        font-size: 0.9em;
+        padding: 15px 0;
+    }
+}
+    
+
+
+
+
 
 
 
