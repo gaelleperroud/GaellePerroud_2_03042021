@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <title>Reservia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/5f42898a4f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,7 +32,7 @@
                     <form method=post action= "page.php" id="form">
                         <p>
                             <label for="recherche"></label>
-                            <input type="text" name="recherche" id="recherche" value="Marseille,France"/>
+                            <input type="text" name="recherche" id="recherche" value="Marseille, France"/>
                         </p>
                         <p>
                             <button type="submit" id="form-button"><span>Rechercher</span><i class="fas fa-search icon-search"></i></button>
@@ -40,22 +41,24 @@
                 </div>
                 <div id="filter">
                     <h2>Filtres</h2>
+                    
                     <div class="filter-button">
                         <i class="fas fa-money-bill-wave icon-filter"></i>
                         <h3>Économique</h3>
-                    </div>
+                    </div>                      
                     <div class="filter-button">
                         <i class="fas fa-child icon-filter"></i>
                         <h3>Familial</h3>
-                    </div>
+                    </div>                   
                     <div class="filter-button">
                         <i class="fas fa-heart icon-filter"></i>
                         <h3>Romantique</h3>
                     </div>
                     <div class="filter-button">
-                        <i class="fas fa-dog icon-filter"></i>
-                        <h3>Animaux autorisés</h3>
+                            <i class="fas fa-dog icon-filter"></i>
+                            <h3>Animaux autorisés</h3>
                     </div>
+                                        
                 </div>
                 <div id="info">
                     <i class="fas fa-info icon-info"></i>
