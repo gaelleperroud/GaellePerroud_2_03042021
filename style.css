@@ -752,6 +752,7 @@ footer a{
 
     .popular-section{
         width:98%;
+        max-width: 600px;
         height: 620px;
         margin: auto;
         border: none;
